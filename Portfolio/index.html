@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chady AlManaked Portfolio</title>
+<style>
+
+/* Retro Colors and Fonts */
+body {
+    margin: 0;
+    font-family: 'Courier New', monospace;
+    background-color: #fceae8;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ff4d6d;
+    z-index: 1000;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.navbar li {
+    margin: 0 20px;
+}
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+.navbar a:hover {
+    color: #000;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    text-align: center;
+}
+.hero-section img {
+    width: 100%;
+    height: auto;
+}
+.overlay-text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px 30px;
+}
+
+/* Content Sections */
+.content-section {
+    padding: 80px 20px;
+}
+
+/* Columns */
+.columns {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+.col {
+    width: 40%;
+    height: 250px;
+    color: #ff4d6d;
+}
+.profile-img {
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    filter: sepia(0.5);
+    max-width: 100%;
+    height: auto;
+}
+
+/* Table Styling */
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 60%;
+}
+th, td {
+    border: 2px solid #ff4d6d;
+    padding: 12px;
+    text-align: center;
+}
+th {
+    background-color: #ffd6da;
+}
+
+/* Paragraph Hover */
+.hover-para:hover {
+    color: #000;
+    font-weight: bold;
+}
+
+/* Overlay Image Fade */
+.overlay-container {
+    position: relative;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.fade-img {
+    width: 100%;
+    opacity: 0.8;
+    transition: 0.5s ease;
+    border-radius: 20px;
+}
+.fade-img:hover {
+    opacity: 1;
+}
+.overlay-text-fade {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+}
+
+/* Video Background */
+.video-section {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+}
+.bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.video-overlay-text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #ff4d6d;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 15px 0;
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#video">Video</a></li>
+    </ul>
+</nav>
+
+<!-- Hero Section -->
+<header id="home" class="hero-section">
+    <div class="overlay-text">Chady AlManaked</div>
+    <img src="media/bg-image.jpg" alt="Retro Background">
+</header>
+
+<!-- About Section -->
+<section id="about" class="content-section">
+    <h2>About Me</h2>
+    <div class="columns">
+        <div class="col">
+            <p class="hover-para">Hi! I’m Chady, a student exploring the world of web development.</p>
+        </div>
+        <div class="col">
+            <img src="https://cdn.pixabay.com/photo/2014/01/04/13/38/tin-can-238488_1280.jpg" alt="Chady Portrait" class="profile-img">
+        </div>
+    </div>
+</section>
+
+<!-- Skills Table -->
+<section id="skills" class="content-section">
+    <h2>Skills Table</h2>
+    <table>
+        <tr>
+            <th>Language</th>
+            <th>Experience</th>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>Advanced</td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+            <td>Intermediate</td>
+        </tr>
+    </table>
+</section>
+
+<!-- Image Overlay Fade -->
+<section class="overlay-fade">
+    <div class="overlay-container">
+        <img src="https://cdn.pixabay.com/photo/2016/01/09/18/27/camera-1130731_1280.jpg" alt="Overlay" class="fade-img">
+        <div class="overlay-text-fade">Retro Vibes Only</div>
+    </div>
+</section>
+
+<!-- Autoplay Video Section -->
+<section id="video" class="video-section">
+    <video autoplay muted loop class="bg-video">
+        <source src="https://cdn.pixabay.com/video/2016/09/21/5598-185024745_tiny.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="video-overlay-text">Welcome to my world!</div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 Chady AlManaked | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
